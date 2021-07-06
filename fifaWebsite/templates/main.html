@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title>test</title>
+    </head>
+    
+    <form action="{{ url_for('main')}}" method="POST">
+    
+        <fieldset>
+        
+            <legend>Input values:</legend>
+            Height:
+            <input name="height_cm" type="number" required>
+            <br>
+            <br>
+            Weight:
+            <input name="weight_kg" type="number" required>
+            <br>
+            <br>
+            Age:
+            <input name="age" type="number" required>
+            <br>
+            <br>
+            Dribbling:
+            <input name="dribbling" type="number" required>
+            <br>
+            <br>
+            Pace:
+            <input name="pace" type="number" required>
+            <br>
+            <br>
+            Physical:
+            <input name="physic" type="number" required>
+            <br>
+            <br>
+            Defending:
+            <input name="defending" type="number" required>
+            <br>
+            <br>
+            Shooting:
+            <input name="shooting" type="number" required>
+            <br>
+            <br>
+            Passing:
+            <input name="passing" type="number" required>
+            <br>
+            <br>
+            <input type="submit">
+        
+        </fieldset>
+    
+    </form>
+    <br>
+    <div class="result" align="center">
+        {% if result %}
+            {% for variable, value in original_input.items() %}
+                <b>{{ variable }}</b> : {{ value }}
+            {% endfor %}
+            <br>
+            <br> Your Predicted Overall:
+               <p style="font-size:50px">{{ result }}</p>
+        {% endif %}
+    </div>
+    
+    
+    <style>
+        form {
+            margin: auto;
+            width: 35%;
+        }
+        .result {
+            margin: auto;
+            width: 35%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</html>
