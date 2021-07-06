@@ -5,4 +5,6 @@ It uses a trained model which was trained on a FIFA 21 Dataset using the same in
 
 The model training is within the jupyter notebook while the web app is within the _FifaWebsite_ folder, containing the html file, app.py and the model saved as a pickle file
 
+The web app is yet to be deployed online as of yet, with improvements to the model and app to come!
+
 The dataset can be found here: https://www.kaggle.com/stefanoleone992/fifa-21-complete-player-dataset?select=players_21.csv
